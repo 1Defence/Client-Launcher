@@ -9,6 +9,7 @@ https://user-images.githubusercontent.com/63735241/119376192-ae8dc480-bc89-11eb-
 * AHK Can be downloaded here : https://autohotkey.com/download/
 * Remember client position setting ![image](https://user-images.githubusercontent.com/63735241/119899297-f1ad9900-bf10-11eb-90a7-09d7bcac65b9.png)
 * Keep file hierarchy the same, some AHK scripts interact with eachother, functionality will be lost if files are moved; use the Buttons or Launcher Utilites script or shortcuts if you wish to access certain files easier.
+* See [Known Issues](#known-issues)
 
 # Creating a launcher
 
