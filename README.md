@@ -12,8 +12,9 @@ https://user-images.githubusercontent.com/63735241/119376192-ae8dc480-bc89-11eb-
 * See [Known Issues](#known-issues)
 
 # Download
- ![image](https://user-images.githubusercontent.com/63735241/119900454-8b297a80-bf12-11eb-9426-f20035bc15b2.png)
- * Download the rar and extract the folder prior to use.
+![image](https://user-images.githubusercontent.com/63735241/119900454-8b297a80-bf12-11eb-9426-f20035bc15b2.png)
+![image](https://user-images.githubusercontent.com/63735241/119900867-173ba200-bf13-11eb-995b-a6f616cbf318.png)
+
 
 # Creating a launcher
 
