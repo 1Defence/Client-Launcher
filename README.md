@@ -1,46 +1,45 @@
 # Launcher
-Launch multiple accounts with their own settings files on RuneLite, you can do this normally with RuneLite by creating shortcuts with params but this is more for users who wish to have multiple different set-ups of account settings
-E.G you can have different client setups specifically for each boss if you use a lot of alts.
+Launch multiple accounts with their own ***unique settings files*** on RuneLite by running a single script<br/><br/>
+This script builds on the base funcitonality runelite provides allowing you to pass seperate settings files to individual clients<br/>
+With this launcher you can have different launchers for varying situations without needing to create 100 shortcuts/settings files manually.
 
-# Setting the location of your client
-**Run "Set Client Path.ahk" and browse for the RuneLite(.jar/.exe) file, the expected location below**
+https://user-images.githubusercontent.com/63735241/119376192-ae8dc480-bc89-11eb-844d-0ffd2c55ad99.mp4
+
+# Creating a launcher
+
+Run ***Launcher Creator.ahk*** and follow the steps<br/>
+* Choose the **name** of your Launcher<br/>
+* Choose the **number** of clients you desire the launcher to run<br/>
+* Choose the **base settings** location<br/>
+If you play logged into the cloud, your settings location differs (%userprofile%/.runelite/profiles/EMAIL_NAME/settings.properties)<br/>
+*Otherwise, select no*<br/>
+By default if you select no leave the next input blank and you're finished.<br/><br/>
+If you wish to use a different base settings file from a pre-existing launcher rather than leaving the input blank, input the name of the file and the program will find the path.<br/>
+**Example:** you have a Bandos settings file you want to base off, you'd enter Bandos_1 or Bandos_2 etc and it would search for Settings_Bandos2 and use that as the base file.
+	
+https://user-images.githubusercontent.com/63735241/119378843-b6029d00-bc8c-11eb-9d55-cf9d3a7b923f.mp4
+
+# Running a launcher
+* Launchers are saved in the Launcher folder, simply run the launcher you've created<br/>
+* On first run, settings files are created and all clients will be in the same location with the same base settings<br/>
+* Simply move them change the settings as you see fit and they'll each save to their own settings files<br/>
+* Their settings files will be located at .runelite/Settings/LAUNCHERNAME<br/>
+* **Example:** file name is *Bandos*, client count is *2*<br/> at *%userprofile%/.runelite/settings/Bandos/* there will be two files ; *Settings_Bandos1.properties*,*Settings_Bandos2.properties*<br/>
+
+# Changing the location of your client
+Run ***Set Client Path.ahk*** and browse for the RuneLite(.jar/.exe) file, the expected location below
 	
 	%localappdata%\RuneLite
-	
 
 https://user-images.githubusercontent.com/63735241/118590762-12d3f400-b771-11eb-9e05-e84308a3cebc.mp4
 
-# Setting the location of your .runelite
-**Run "Set Settings Path.ahk" and browse for the .runelite folder, the expected location below**
+# Changing the location of your .runelite
+Run ***Set Settings Path.ahk*** and browse for the .runelite folder, the expected location below
 	
 	%userprofile%\.runelite
 
 https://user-images.githubusercontent.com/63735241/118584267-9a673600-b764-11eb-85f9-41cfda14f611.mp4
 
-# Creating a launcher
-
-	Run "Launcher Creator.ahk" and follow the steps
-	1. Choose the name of your Launcher
-	2. Choose the number of clients you desire the launcher to run
-	3. Optionally, select a settings file that your clients will be based off of prior to your changes
-	By default all new settings files will be based off your original "settings.properties" file
-	On the last step when asked for a file if you enter a specific properties file the specified file will be used as the base
-	Simply enter nothing on the last step if you wish to use your standard settings file as the base
-	
-	
-https://user-images.githubusercontent.com/63735241/118585022-1615b280-b766-11eb-9711-da70b21036ba.mp4
-
-# Running a launcher
-
-	Launchers are saved in the Launcher folder, simply run the launcher you've created
-	On first run, settings files are created and all clients will be in the same location with the same base settings
-	Simply move them change the settings as you see fit and they'll each save to their own settings files.
-	Their settings files will be located at .runelite/Settings/LAUNCHERNAME;
-	Example, file name is "Bandos", client count is 2;
-	At ".runelite/Settings/Bandos/" There will be a "Settings_Bandos1.properties","Settings_Bandos2.properties"
-	
-
-https://user-images.githubusercontent.com/63735241/118586909-95f14c00-b769-11eb-905e-55b1668e5ec4.mp4
 
 # Known Issues
 	Upon running the client it seems like settings didn't save because a client appears in the center
