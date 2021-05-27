@@ -62,5 +62,7 @@ Run ***Delete Launcher.ahk*** and browse the Launchers folder for the file you w
 https://user-images.githubusercontent.com/63735241/119898515-f45bbe80-bf0f-11eb-90c7-804365bd24b0.mp4
 
 # Known Issues
-	Upon running the client it seems like settings didn't save because a client appears in the center
-	This is a RL issue, out of bounds clients are set to the center, avoid moving clients partially off screen to prevent this.
+* Upon running the client it seems like settings didn't save because a client appears in the center
+This is a RL issue, out of bounds clients are set to the center, avoid moving clients partially off screen to prevent this.
+* Logging in via cloud/email won't have the intended behaviour as a logged in file will only use the one settings file, you cannot be logged in and have this functionality, you can however take your log-in files settings you just won't be able to take advantage of the shared loot tracker.
+If you do choose to login, that one account will only ever have its logged-in settings and ignore the custom settings file.
