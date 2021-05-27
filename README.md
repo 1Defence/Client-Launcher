@@ -5,6 +5,11 @@ With this launcher you can have different launchers for varying situations witho
 
 https://user-images.githubusercontent.com/63735241/119376192-ae8dc480-bc89-11eb-844d-0ffd2c55ad99.mp4
 
+# Requirements
+* AHK Can be downloaded here : https://autohotkey.com/download/
+* Remember client position setting ![image](https://user-images.githubusercontent.com/63735241/119899297-f1ad9900-bf10-11eb-90a7-09d7bcac65b9.png)
+
+
 # Creating a launcher
 
 Run ***Launcher Creator.ahk*** and follow the steps<br/>
@@ -31,15 +36,24 @@ Run ***Set Client Path.ahk*** and browse for the RuneLite(.jar/.exe) file, the e
 	
 	%localappdata%\RuneLite
 
-https://user-images.githubusercontent.com/63735241/118590762-12d3f400-b771-11eb-9e05-e84308a3cebc.mp4
+https://user-images.githubusercontent.com/63735241/119897914-17d23980-bf0f-11eb-86e3-e9870c41aa45.mp4
 
 # Changing the location of your .runelite
 Run ***Set Settings Path.ahk*** and browse for the .runelite folder, the expected location below
 	
 	%userprofile%\.runelite
 
-https://user-images.githubusercontent.com/63735241/118584267-9a673600-b764-11eb-85f9-41cfda14f611.mp4
+https://user-images.githubusercontent.com/63735241/119897949-23bdfb80-bf0f-11eb-961b-9b6cc3824725.mp4
 
+# Renaming an existing Launcher
+Run ***Rename Launcher.ahk*** and browse the Launchers folder for the file you wish to rename
+	
+https://user-images.githubusercontent.com/63735241/119898452-ddb56780-bf0f-11eb-88a4-4dcddff237b0.mp4
+
+# Deleting an existing Launcher
+Run ***Delete Launcher.ahk*** and browse the Launchers folder for the file you wish to delete
+	
+https://user-images.githubusercontent.com/63735241/119898515-f45bbe80-bf0f-11eb-90c7-804365bd24b0.mp4
 
 # Known Issues
 	Upon running the client it seems like settings didn't save because a client appears in the center
