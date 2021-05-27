@@ -24,12 +24,16 @@ SETTINGS_DIRECTORY := % SETTINGS_PATH . "\settings"
 ;directory to create launcher in
 LAUNCHER_DIRECTORY := % DIRECTORY . "\Launchers"
 
+;ensures settings directory exists before attempting deletion
 If(!InStr( FileExist(SETTINGS_DIRECTORY), "D") ){
+	;informs user of the issue
 	MsgBox, 48, Warning, "No valid settings directory present"
 	ExitApp
 }
 
+;ensures launchers directory exists before attempting deletion
 If(!InStr( FileExist(LAUNCHER_DIRECTORY), "D") ){
+	;informs user of the issue
 	MsgBox, 48, Warning, "No valid launchers directory present"
 	ExitApp
 }
@@ -40,7 +44,6 @@ FlushDirectory(LAUNCHER_DIRECTORY)
 
 ;flushes directory by deleting everything inside and recreating it.
 FlushDirectory(dir){
-	;MsgBox % dir
 	FileRemoveDir, %dir%, 1
 	FileCreateDir, %dir%
 }
