@@ -1,4 +1,4 @@
-# Launcher
+# Client Launcher
 Launch multiple accounts with their own ***unique settings files*** on RuneLite by running a single script<br/><br/>
 This script builds on the base funcitonality runelite provides allowing you to pass seperate settings files to individual clients<br/>
 With this launcher you can have different launchers for varying situations without needing to create 100 shortcuts/settings files manually.
