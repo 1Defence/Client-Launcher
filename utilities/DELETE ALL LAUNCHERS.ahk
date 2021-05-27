@@ -19,17 +19,28 @@ if(SETTINGS_PATH = "NOT_SET"){
 	SETTINGS_PATH = %userprofile%\.runelite
 }
 ;append settings to the path
-SETTINGS_DIRECTORY := % SETTINGS_PATH . "\settings\"
+SETTINGS_DIRECTORY := % SETTINGS_PATH . "\settings"
 
 ;directory to create launcher in
-LAUNCHER_DIRECTORY := % DIRECTORY . "\Launchers\"
+LAUNCHER_DIRECTORY := % DIRECTORY . "\Launchers"
 
+If(!InStr( FileExist(SETTINGS_DIRECTORY), "D") ){
+	MsgBox, 48, Warning, "No valid settings directory present"
+	ExitApp
+}
+
+If(!InStr( FileExist(LAUNCHER_DIRECTORY), "D") ){
+	MsgBox, 48, Warning, "No valid launchers directory present"
+	ExitApp
+}
+	
 ;flush the directory of settings / launchers
 FlushDirectory(SETTINGS_DIRECTORY)
 FlushDirectory(LAUNCHER_DIRECTORY)
 
 ;flushes directory by deleting everything inside and recreating it.
 FlushDirectory(dir){
+	;MsgBox % dir
 	FileRemoveDir, %dir%, 1
 	FileCreateDir, %dir%
 }
