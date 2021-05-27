@@ -11,6 +11,10 @@ https://user-images.githubusercontent.com/63735241/119376192-ae8dc480-bc89-11eb-
 * Keep file hierarchy the same, some AHK scripts interact with eachother, functionality will be lost if files are moved; use the Buttons or Launcher Utilites script or shortcuts if you wish to access certain files easier.
 * See [Known Issues](#known-issues)
 
+# Download
+ * ![image](https://user-images.githubusercontent.com/63735241/119900454-8b297a80-bf12-11eb-9426-f20035bc15b2.png)
+ * Download the rar and extract the folder prior to use.
+
 # Creating a launcher
 
 Run ***Launcher Creator.ahk*** and follow the steps<br/>
