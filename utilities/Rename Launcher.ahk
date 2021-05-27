@@ -123,6 +123,8 @@ While(Running){
 				
 				;inform user the file and settings were successfuly updated.
 				MsgBox, 64, , Launcher and settings successfuly updated`n [%fileName%] -> [%UserInput%]
+				;run the buttons script(only initiates if its already running) with the paramater telling it to refresh as the directory has updated.
+				run %A_AhkPath% %DIRECTORY%\"Buttons.ahk" 1
 				;Running := false
 			}
 		}else{
