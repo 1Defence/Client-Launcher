@@ -9,4 +9,4 @@ DIRECTORY := RegExReplace(A_ScriptDir,"[^\\]+\\?$")
 SplitPath, A_ScriptName,,,, FILE_NAME
 FILE_NAME:= """" . FILE_NAME . """"
 ;Run the main script with all of said established arguments
-run %A_AhkPath% %DIRECTORY%\"\lib\LauncherBase.ahk" %CLIENT_COUNT% %FILE_NAME% %SETTINGS_BASE_NAME%
+run %A_AhkPath% `"%DIRECTORY%lib\LauncherBase.ahk`" %CLIENT_COUNT% `"%FILE_NAME%`" `"%SETTINGS_BASE_NAME%`"
