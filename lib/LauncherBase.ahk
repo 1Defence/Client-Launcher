@@ -191,8 +191,11 @@ IfInString, CLIENT_PATH,.exe
 
 ;argument passing differs based on exe vs jar, this handles that, effectively theres a prefix+suffix if its an executable otherwise there isnt.
 GenerateArgs(fileNumber){
+	settingsFileName := GenerateSettingsFile(fileNumber)
+	settingsFilePath = `"%CURRENT_SETTINGS_DIR%%settingsFileName%`"
+	sessionFilePath = `"%CURRENT_SETTINGS_DIR%session%fileNumber%`"
 	pref := IsExe ? "--clientargs """ : ""
-	arg = % "--config=" . CURRENT_SETTINGS_DIR . GenerateSettingsFile(fileNumber) . " --sessionfile=" . CURRENT_SETTINGS_DIR . "session" . fileNumber
+	arg = % "--config=" . settingsFilePath . " --sessionfile=" . sessionFilePath
 	suf := IsExe ? """" : ""
 	return pref . arg . suf
 }
