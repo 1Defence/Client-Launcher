@@ -1,4 +1,6 @@
 #SingleInstance force
+;incase user runs it from outside sources
+SetWorkingDir %A_ScriptDir%
 
 ;prevent user from running script in its zipped form.
 ;when ran inside an archive its placed in a temporary folder on its own isolated meaning that is the only file
