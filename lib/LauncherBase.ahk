@@ -1,4 +1,6 @@
 #SingleInstance force
+;incase user runs it from outside sources
+SetWorkingDir %A_ScriptDir%
 
 ;Number of arguments that should be present upon running script.
 ARG_COUNT = 3
