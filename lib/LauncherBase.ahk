@@ -140,7 +140,7 @@ scheduledTimeout := (a_sec+60)
 
 ;searches folder/sub folders of .runelite to find user-selected base file (By default this is just your normal Settings.properties file)
 loop %CLIENT_COUNT%{
-	checkPath := GenerateSettingsFile(A_Index,true)
+	checkPath := GenerateSettingsFile(A_Index,true,true)
 	;if current properties file index not present, search for desired base settings file to copy over.
 	if !FileExist(checkPath){
 	
@@ -167,7 +167,7 @@ loop %CLIENT_COUNT%{
 		}
 	
 	;copy the base file, with the current file name & index as a new properties file.
-	FileCopy, %COPY_PATH%, % GenerateSettingsFile(A_Index,true)
+	FileCopy, %COPY_PATH%, % GenerateSettingsFile(A_Index,true,true)
 	;inform user that a new settings file was created, this only occurs on creation, not on subsequent runs.
 	MsgBox, 0, , % "Setting new properties for client : " . A_Index, 1
 	}
@@ -177,7 +177,7 @@ Sleep, 500
 
 ;check and ensure each property file for the given launcher exists prior to proceeding.
 loop %CLIENT_COUNT%{
-	checkPath := GenerateSettingsFile(A_Index,true)
+	checkPath := GenerateSettingsFile(A_Index,true,true)
 	if !FileExist(checkPath){
 	MsgBox, 16, ERROR, FATAL ERROR : settings werent generated in time
 	ExitApp
@@ -193,18 +193,18 @@ IfInString, CLIENT_PATH,.exe
 
 ;argument passing differs based on exe vs jar, this handles that, effectively theres a prefix+suffix if its an executable otherwise there isnt.
 GenerateArgs(fileNumber){
-	settingsFileName := GenerateSettingsFile(fileNumber)
+	settingsFileName := GenerateSettingsFile(fileNumber,false,false)
 	settingsFilePath = `"%CURRENT_SETTINGS_DIR%%settingsFileName%`"
 	sessionFilePath = `"%CURRENT_SETTINGS_DIR%session%fileNumber%`"
 	pref := IsExe ? "--clientargs """ : ""
-	arg = % "--config=" . settingsFilePath . " --sessionfile=" . sessionFilePath
+	arg = % "--profile " . settingsFileName
 	suf := IsExe ? """" : ""
 	return pref . arg . suf
 }
 
 ;convinience function for creating the settings file url, by default it won't include directory unless true is passed.
-GenerateSettingsFile(fileNumber, includeDir = false){
-	return % (includeDir ? CURRENT_SETTINGS_DIR : "") . SETTINGS_FILE_PREFIX . FILE_NAME . fileNumber . SETTING_FILE_SUFFIX
+GenerateSettingsFile(fileNumber, includeDir, includeSuffix){
+	return % (includeDir ? CURRENT_SETTINGS_DIR : "") . SETTINGS_FILE_PREFIX . FILE_NAME . fileNumber . (includeSuffix ? SETTING_FILE_SUFFIX : "")
 }
 
 ;all settings files created or already present, proceed to the program.
